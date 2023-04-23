@@ -15,6 +15,7 @@ export class TaskHeaderComponent {
     this.taskCreated.emit({
       task: this.newTask
     });
+    this.newTask = "";
   }
 
 }
