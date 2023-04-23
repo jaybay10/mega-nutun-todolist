@@ -13,3 +13,14 @@ input{
 s{
     color: red;
 }
+
+mat-icon{
+    position: absolute;
+    right: 10px;
+}
+
+mat-icon:hover{
+    cursor: pointer;
+    color: red;
+    transition: 0.5s;
+}

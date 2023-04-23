@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TaskHeaderComponent } from './task-header/task-header.component';
 import { TaskListsComponent } from './task-lists/task-lists.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { TaskListsComponent } from './task-lists/task-lists.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
