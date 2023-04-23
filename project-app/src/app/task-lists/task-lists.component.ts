@@ -1,3 +1,4 @@
+import { Text } from '@angular/compiler';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -8,5 +9,15 @@ import { Component, Input } from '@angular/core';
 export class TaskListsComponent {
 
   @Input() newTask!: {task: string};
+
+  checkTask: boolean = false;
+
+  checkbox(){
+    if(this.checkTask == false){
+      this.checkTask = true;
+  } else {
+    this.checkTask = false;
+  }
+}
 
 }
