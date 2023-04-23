@@ -16,4 +16,9 @@ export class AppComponent {
       task: newTask.task
     });
   }
+
+  ClearTasks(){
+    this.taskList = [];
+  }
+
 }
