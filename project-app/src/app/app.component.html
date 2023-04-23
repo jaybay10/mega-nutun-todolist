@@ -1,3 +1,17 @@
-<app-task-header (taskCreated)="onNewTaskCreated($event)"></app-task-header>
-<app-task-lists *ngFor="let task of taskList, index as newTask"
-[newTask]="task"></app-task-lists>
+<section class="vh-100 gradient-custom">
+  <div class="container">
+    <div class="row">
+      <div class="col col-xl-10">
+        <div class="card">
+          <div class="card-body">
+            <h1>Todo-list</h1>
+            <app-task-header (taskCreated)="onNewTaskCreated($event)"></app-task-header>
+            <app-task-lists *ngFor="let task of taskList, index as newTask"
+            [newTask]="task"></app-task-lists>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

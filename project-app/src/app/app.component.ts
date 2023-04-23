@@ -9,12 +9,7 @@ export class AppComponent {
   title = 'project-app';
 
 
-  taskList = [{
-    task: "Task 1"
-  },
-  {
-  task: "Task 2"
-  }];
+  taskList = [{task: "Click check box to mark as completed"}, {task: "Click X to delete task"}];
 
   onNewTaskCreated(newTask: {task: string}){
     this.taskList.push({
