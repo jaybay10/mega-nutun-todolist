@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'project-app';
+
+
+  taskList = [{
+    task: "Task 1"
+  },
+  {
+  task: "Task 2"
+  }];
+
+  onNewTaskCreated(newTask: {task: string}){
+    this.taskList.push({
+      task: newTask.task
+    });
+  }
 }

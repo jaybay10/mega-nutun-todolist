@@ -1,2 +1,3 @@
-<app-task-header></app-task-header>
-<app-task-lists></app-task-lists>
+<app-task-header (taskCreated)="onNewTaskCreated($event)"></app-task-header>
+<app-task-lists *ngFor="let task of taskList, index as newTask"
+[newTask]="task"></app-task-lists>
