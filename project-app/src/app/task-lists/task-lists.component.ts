@@ -1,4 +1,3 @@
-import { Text } from '@angular/compiler';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -18,6 +17,7 @@ export class TaskListsComponent {
   } else {
     this.checkTask = false;
   }
+
 }
 
 }
