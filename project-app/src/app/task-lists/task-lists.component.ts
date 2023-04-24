@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class TaskListsComponent {
 
   @Input() newTask!: {task: string};
+  @Input() id!: number;
 
   checkTask: boolean = false;
 
