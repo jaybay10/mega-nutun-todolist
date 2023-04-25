@@ -18,7 +18,6 @@ export class TaskListsComponent {
   } else {
     this.checkTask = false;
   }
-
 }
 
 }
