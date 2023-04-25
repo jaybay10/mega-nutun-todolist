@@ -7,12 +7,14 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class TaskHeaderComponent {
 
-  @Output() taskCreated = new EventEmitter<{task: string}>();
+  @Output() taskCreated = new EventEmitter<{id: number; task: string}>();
 
   newTask: string = "";
+  id: number = 0;
 
   AddNewTask(){
     this.taskCreated.emit({
+      id: this.id++,
       task: this.newTask
     });
     this.newTask = "";

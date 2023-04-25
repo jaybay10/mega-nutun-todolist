@@ -4,7 +4,7 @@
         <li class="list-group-item">
           <input class="form-check-input me-2" type="checkbox" unchecked (click)="checkbox()"/>
           {{newTask.task}}
-          <mat-icon class="delete">delete_forever</mat-icon>
+          <mat-icon class="delete" (click)="deleteTask()">delete_forever</mat-icon>
       </ul>
       <ng-template #BoxTicked>
         <ul class="list-group mb-0">

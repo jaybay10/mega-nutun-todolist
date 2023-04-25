@@ -7,8 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class TaskListsComponent {
 
-  @Input() newTask!: {task: string};
-  @Input() id!: number;
+  @Input() newTask!: {id: number; task: string};
 
   checkTask: boolean = false;
 
@@ -20,4 +19,7 @@ export class TaskListsComponent {
   }
 }
 
+deleteTask(){
+  console.log(this.newTask);
+}
 }
