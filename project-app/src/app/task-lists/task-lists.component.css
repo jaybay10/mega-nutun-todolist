@@ -14,12 +14,23 @@ s{
     color: red;
 }
 
-mat-icon{
+mat-icon.edit{
+    position: absolute;
+    right: 35px;
+}
+
+mat-icon.delete{
     position: absolute;
     right: 10px;
 }
 
-mat-icon:hover{
+mat-icon.edit:hover{
+    cursor: pointer;
+    color: grey;
+    transition: 0.5s;
+}
+
+mat-icon.delete:hover{
     cursor: pointer;
     color: red;
     transition: 0.5s;
