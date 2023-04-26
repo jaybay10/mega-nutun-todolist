@@ -11,9 +11,18 @@
           <li class="list-group-item ">
             <input class="form-check-input me-2" type="checkbox" checked (click)="checkbox()"/>
             <s>{{newTask.task}}</s>
-            <mat-icon class="delete">delete_forever</mat-icon>
+            <mat-icon class="delete" (click)="deleteTask()" >delete_forever</mat-icon>
         </ul>
       </ng-template>
+      <ng-template #TaskDeleted>
+        <ul class="list-group mb-0" *ngIf="!deletebuttonPressed; else TaskDeleted">
+        <div class="alert alert-success" role="alert">
+          A simple success alert—check it out!
+        </div>
+      </ul>
+      </ng-template>
+      
     </div>
   </div>
+ 
 

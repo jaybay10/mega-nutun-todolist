@@ -11,6 +11,8 @@ export class TaskListsComponent {
   @Output() taskDeleted = new EventEmitter<{id: number; task: string}>();
 
   checkTask: boolean = false;
+  deletebuttonPressed: boolean = false;
+  
 
   checkbox(){
     if(this.checkTask == false){
@@ -21,6 +23,7 @@ export class TaskListsComponent {
 }
 
 deleteTask(){
+  this.deletebuttonPressed = true;
   this.taskDeleted.emit({
     id: this.newTask.id,
     task: this.newTask.task
