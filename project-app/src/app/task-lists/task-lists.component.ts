@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-task-lists',
@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class TaskListsComponent {
 
   @Input() newTask!: {id: number; task: string};
+  @Output() taskDeleted = new EventEmitter<{id: number; task: string}>();
 
   checkTask: boolean = false;
 
@@ -20,6 +21,10 @@ export class TaskListsComponent {
 }
 
 deleteTask(){
-  console.log(this.newTask);
+  this.taskDeleted.emit({
+    id: this.newTask.id,
+    task: this.newTask.task
+  });
+  this.newTask.id;
 }
 }

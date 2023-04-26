@@ -7,7 +7,8 @@
             <h1>Todo-list</h1>
             <app-task-header (taskCreated)="onNewTaskCreated($event)"></app-task-header>
             <app-task-lists *ngFor="let task of taskList, index as newTask"
-            [newTask]="task"></app-task-lists>
+            [newTask]="task"
+            (taskDeleted)="deleteItem($event)"></app-task-lists>
             <button class="btn btn-danger" (click)="ClearTasks()">Remove all tasks</button>
           </div>
         </div>

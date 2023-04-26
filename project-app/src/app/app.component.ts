@@ -24,6 +24,14 @@ export class AppComponent {
     });
   }
 
+  deleteItem(currentTask: {id: number; task: string}){
+    for (let index = 0; index < this.taskList.length; index++) {
+      if(this.taskList[index].id == currentTask.id){
+        this.taskList.splice(index, 1);
+      }
+    }
+  }
+
   ClearTasks(){
     for (let index = 0; index < this.taskList.length; index++) {
       this.taskList = [];
